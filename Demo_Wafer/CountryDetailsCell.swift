@@ -31,8 +31,6 @@ class CountryDetailsCell: UITableViewCell {
         self.addGestureRecognizer(swipeLeft)
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.respondToTapGesture))
-        tapGesture.numberOfTapsRequired = 1
-        tapGesture.numberOfTouchesRequired = 1
         self.addGestureRecognizer(tapGesture)
         
         btnDelete.addTarget(self, action: #selector(btnDeleteTapped(_:)), for: .touchUpInside)
@@ -49,7 +47,7 @@ class CountryDetailsCell: UITableViewCell {
         let translatedPoint = btnDelete.convert(point, from: self)
         
         if (btnDelete.bounds.contains(translatedPoint)) {
-            print("Your button was pressed")
+            print("delete button was pressed")
             return btnDelete.hitTest(translatedPoint, with: event)
         }
         return super.hitTest(point, with: event)
@@ -73,6 +71,7 @@ class CountryDetailsCell: UITableViewCell {
     
     // MARK: - Delete action.
     @objc private func btnDeleteTapped(_ sender: UIButton?) {
+        print("btnDeleteTapped")
         self.delegate?.deleteButtonTapped(self.tag)
     }
 }

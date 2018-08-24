@@ -33,7 +33,10 @@ class CountryDataViewController: UIViewController,UITableViewDataSource,UITableV
     func deleteButtonTapped(_ tagValue: Int) {
         self.listViewArray?.remove(at: tagValue)
         let indexPath = IndexPath.init(row: tagValue, section: 0)
-        self.tableViewCountriesData.deleteRows(at: [indexPath], with: .automatic)
+        DispatchQueue.main.async {
+            self.tableViewCountriesData.deleteRows(at: [indexPath], with: .automatic)
+            self.tableViewCountriesData.reloadData()
+        }
     }
     
     // MARK: - Viewcontroller properties
