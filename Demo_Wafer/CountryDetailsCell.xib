@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryDetailsCellId" rowHeight="118" id="KGk-i7-Jjw" customClass="CountryDetailsCell" customModule="Demo_Wafer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOA-fr-9d6">
+                        <rect key="frame" x="320" y="0.0" width="100" height="110"/>
+                        <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
+                        <state key="normal" image="SwipeDeleteIcon">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country :" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt0-9B-4kt">
+                        <rect key="frame" x="10" y="12" width="300" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency :" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7x-51-zlV">
+                        <rect key="frame" x="10" y="44.5" width="300" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language :" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-qD-3kc">
+                        <rect key="frame" x="10" y="74.5" width="300" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WOA-fr-9d6" secondAttribute="bottom" constant="-0.5" id="6vo-Nv-RWM"/>
+                    <constraint firstItem="R7x-51-zlV" firstAttribute="top" secondItem="Nt0-9B-4kt" secondAttribute="bottom" constant="12" id="9mq-pu-REH"/>
+                    <constraint firstItem="pO0-qD-3kc" firstAttribute="top" secondItem="R7x-51-zlV" secondAttribute="bottom" constant="12" id="9qe-xe-1WZ"/>
+                    <constraint firstItem="R7x-51-zlV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DkQ-5O-ljT"/>
+                    <constraint firstAttribute="trailing" secondItem="pO0-qD-3kc" secondAttribute="trailing" constant="10" id="L9I-1j-pIw"/>
+                    <constraint firstAttribute="trailing" secondItem="R7x-51-zlV" secondAttribute="trailing" constant="10" id="MAm-R2-s43"/>
+                    <constraint firstAttribute="trailing" secondItem="WOA-fr-9d6" secondAttribute="trailing" constant="-100" id="TPd-gN-Rs8"/>
+                    <constraint firstItem="Nt0-9B-4kt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="e7T-Nd-hsk"/>
+                    <constraint firstItem="WOA-fr-9d6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="l7e-Ak-xgO"/>
+                    <constraint firstItem="WOA-fr-9d6" firstAttribute="leading" secondItem="Nt0-9B-4kt" secondAttribute="trailing" constant="10" id="nkD-x3-Fcl"/>
+                    <constraint firstItem="Nt0-9B-4kt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qxl-05-tXv"/>
+                    <constraint firstAttribute="trailing" secondItem="Nt0-9B-4kt" secondAttribute="trailing" constant="10" id="xSe-ld-ZKH"/>
+                    <constraint firstItem="pO0-qD-3kc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zGK-Qa-CER"/>
+                    <constraint firstAttribute="bottom" secondItem="pO0-qD-3kc" secondAttribute="bottom" constant="17" id="zTt-8U-qKZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnDelete" destination="WOA-fr-9d6" id="vWc-6g-bnT"/>
+                <outlet property="lblCountryName" destination="Nt0-9B-4kt" id="YNR-9I-glh"/>
+                <outlet property="lblCurrencyName" destination="R7x-51-zlV" id="fuh-Td-wih"/>
+                <outlet property="lblLanguageName" destination="pO0-qD-3kc" id="aJo-5A-N0e"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="32"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SwipeDeleteIcon" width="100" height="100"/>
+    </resources>
+</document>
