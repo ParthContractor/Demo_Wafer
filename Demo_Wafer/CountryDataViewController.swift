@@ -36,11 +36,12 @@ class CountryDataViewController: UIViewController,UITableViewDataSource,UITableV
         self.tableViewCountriesData.deleteRows(at: [indexPath], with: .automatic)
     }
     
+    // MARK: - Viewcontroller properties
     var listViewArray: [Country]?
     @IBOutlet var tableViewCountriesData: UITableView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
 
-    // MARK: - viewcontroller cycle
+    // MARK: - Viewcontroller and helper methods
     override func viewDidLoad() {
         super.viewDidLoad()
        
