@@ -36,9 +36,7 @@ class CountryDetailsCell: UITableViewCell {
         self.addGestureRecognizer(tapGesture)
         
         btnDelete.addTarget(self, action: #selector(btnDeleteTapped(_:)), for: .touchUpInside)
-
     }
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -63,7 +61,10 @@ class CountryDetailsCell: UITableViewCell {
     }
     
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-        print("Swiped  to delete action")
+        //we need to call this event to remove previously swiped cell button before initiating new cell swipe gesture..
+        self.delegate?.tappedOnAnyCell()
+        
+        //This will transform uitableview cell to left side with little animation and show delete/bomb button
         UIView.animate(withDuration: 1.0) {
             self.transform = CGAffineTransform(translationX: -100, y: 0)
             Helper.swipedCellAccessibilityId = self.accessibilityIdentifier
