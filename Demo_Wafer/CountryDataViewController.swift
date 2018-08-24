@@ -20,12 +20,13 @@ class CountryDataViewController: UIViewController,UITableViewDataSource,UITableV
         let cells = self.tableViewCountriesData.visibleCells
         for cell in cells {
             if(cell.accessibilityIdentifier == lastSwipedCellAccessibilityId){
-                
+        DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.5) {
                     cell.transform = CGAffineTransform.identity
                     Helper.swipedCellAccessibilityId = nil
+                    print("nil last selected cell")
+                    }
                 }
-
             }
         }
     }
@@ -35,7 +36,6 @@ class CountryDataViewController: UIViewController,UITableViewDataSource,UITableV
         let indexPath = IndexPath.init(row: tagValue, section: 0)
         DispatchQueue.main.async {
             self.tableViewCountriesData.deleteRows(at: [indexPath], with: .automatic)
-            self.tableViewCountriesData.reloadData()
         }
     }
     
@@ -144,24 +144,11 @@ class CountryDataViewController: UIViewController,UITableViewDataSource,UITableV
         
         return cell
     }
-    /*
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
-        //delete row and data on user initiated delete action
-        let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
-            self.listViewArray?.remove(at: indexPath.row)
-            self.tableViewCountriesData.deleteRows(at: [indexPath], with: .automatic)
-        }
-        deleteAction.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
-
-        return [deleteAction]
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        Helper.swipedCellAccessibilityId = nil
+        print("nil last selected cell")
     }
- 
- */
     
 }
 

@@ -63,9 +63,11 @@ class CountryDetailsCell: UITableViewCell {
         self.delegate?.tappedOnAnyCell()
         
         //This will transform uitableview cell to left side with little animation and show delete/bomb button
+    DispatchQueue.main.async {
         UIView.animate(withDuration: 1.0) {
             self.transform = CGAffineTransform(translationX: -100, y: 0)
             Helper.swipedCellAccessibilityId = self.accessibilityIdentifier
+            }
         }
     }
     
