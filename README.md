@@ -26,5 +26,5 @@ points observation if they are within range SO ALLWOING hitTest FOR THAT delete 
 solution to solve the given problem utilising existing tacticts i.e APIs, UIKit delegate methods , gesture recognizer APIs etc
 )
 
--->Only constraint over here is anchor point decision and fast/slow swipe past anchor point of delete button 
+-->Only constraint/challenge over here is anchor point decision and fast/slow swipe past anchor point of delete button 
 
